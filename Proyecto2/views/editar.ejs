@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Noticia</title>
+</head>
+<body>
+  <h1>Editar Noticia</h1>
+  <form action="/editar/<%= noticia._id %>" method="POST">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" value="<%= noticia.titulo %>" required>
+    <br>
+    <label for="contenido">Contenido:</label>
+    <textarea id="contenido" name="contenido" required><%= noticia.contenido %></textarea>
+    <br>
+    <button type="submit">Actualizar</button>
+  </form>
+</body>
+</html>

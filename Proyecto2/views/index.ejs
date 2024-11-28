@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Noticias</title>
+</head>
+<body>
+  <h1>Lista de Noticias</h1>
+  <a href="/agregar">Agregar Noticia</a>
+  <ul>
+    <% noticias.forEach(noticia => { %>
+      <li>
+        <h2><%= noticia.titulo %></h2>
+        <p><%= noticia.contenido %></p>
+        <a href="/editar/<%= noticia._id %>">Editar</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
